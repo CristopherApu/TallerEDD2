@@ -3,7 +3,7 @@
 
     void saludo();
     void ConsultaNombreBar();
-    void ConsultaProductos();
+    void ConsultaCantidadProductos();
     void AgregaNombreProductos();
     void AgregaPrecioProductos();
     void despedida();
