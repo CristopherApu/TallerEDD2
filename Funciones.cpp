@@ -9,25 +9,25 @@ void saludo(){
 
 void ConsultaNombreBar(){
 
-    printf("¿Cómo se llama el local?\n");
+    printf("Como se llama el local?\n");
 
 }
 
-void ConsultaProductos(){
+void ConsultaCantidadProductos(){
 
-    printf("¿Cuántos productos desea agregar?");
+    printf("Cuantos productos desea agregar?\n");
 
 }
 
 void AgregaNombreProductos(){
 
-    printf("¿Cuál es el nombre del producto?")
+    printf("Cual es el nombre del producto?\n");
 
 }
 
-void AgregaValorProductos(){
+void AgregaPrecioProductos(){
 
-    printf("¿Cuál es el precio del producto?")
+    printf("Cual es el precio del producto?\n");
 
 }
 
