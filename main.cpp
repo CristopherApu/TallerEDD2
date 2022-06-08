@@ -23,10 +23,12 @@ int main(){
     fprintf(arch, "Lista_");
     fprintf(arch, "%s", NombreBar);
     fprintf(arch, ".txt\n");
+    
+    //gets(char NombreBarModificado , sizeof(NombreBar) + 10 , FILE * arch);
+    
     fclose(arch);
-
-    //gets()
-
+    
+    
     FILE * arch2 = fopen(NombreBarModificado, "a+");
 
     ConsultaCantidadProductos();
