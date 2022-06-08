@@ -1,16 +1,19 @@
 #include <cstdio>
+#include <iostream>
+#include <fstream>
 using namespace std;
 #include "Funciones.h"
 
+
+char NombreBar[40];
+int CantidadProductos;
+char NombreProducto;
+int PrecioProducto;
+char NombreBarModificado[50];
+
 int main(){
 
-    char NombreBar[12];
-    int CantidadProductos;
-    char NombreListaBar;
-    char NombreProducto;
-    int PrecioProducto;
-
-    FILE * arch = fopen("Lista_Locales_Disponibles.txt", "a+");
+    FILE * arch = fopen("modificador.txt", "w");
 
     saludo();
 
@@ -20,13 +23,14 @@ int main(){
     fprintf(arch, "Lista_");
     fprintf(arch, "%s", NombreBar);
     fprintf(arch, ".txt\n");
+    fclose(arch);
 
-    fgets();
+    //gets()
 
-    FILE * arch2 = fopen("%s", NombreListaBar, "a+");
+    FILE * arch2 = fopen(NombreBarModificado, "a+");
 
-    ConsultaProductos();
-    scanf("%d",CantidadProductos);
+    ConsultaCantidadProductos();
+    scanf("%d", CantidadProductos);
 
     for( int i = 0 ; i == CantidadProductos ; i = i + 1){
 
