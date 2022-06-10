@@ -1,17 +1,17 @@
 #include <cstdio>
 #include <iostream>
 #include <fstream>
+#include <stdio.h>
 using namespace std;
 #include "Funciones.h"
 
-
-char NombreBar[40];
-int CantidadProductos;
-char NombreProducto;
-int PrecioProducto;
-char NombreBarModificado[50];
-
 int main(){
+
+    char NombreBar[40];
+    int CantidadProductos;
+    char NombreProducto;
+    int PrecioProducto;
+    char NombreBarModificado[50];
 
     FILE * arch = fopen("modificador.txt", "w");
 
@@ -23,13 +23,15 @@ int main(){
     fprintf(arch, "Lista_");
     fprintf(arch, "%s", NombreBar);
     fprintf(arch, ".txt\n");
-    
-    //gets(char NombreBarModificado , sizeof(NombreBar) + 10 , FILE * arch);
-    
     fclose(arch);
-    
-    
+
+    arch = fopen("modificador.txt", "r");
+    fscanf(arch, "%s", NombreBarModificado);
+
     FILE * arch2 = fopen(NombreBarModificado, "a+");
+    fclose(arch2);
+
+
 
     ConsultaCantidadProductos();
     scanf("%d", CantidadProductos);
