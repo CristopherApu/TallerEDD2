@@ -1,17 +1,18 @@
 #include <cstdio>
 #include <iostream>
 #include <fstream>
-#include <stdio.h>
+#include <cstring>
 using namespace std;
 #include "Funciones.h"
 
 int main(){
 
-    char NombreBar[40];
-    int CantidadProductos;
+    char NombreBar[80];
+    int QuiereAgregarOtroProducto;
     char NombreProducto;
     int PrecioProducto;
-    char NombreBarModificado[50];
+    char NombreBarModificado[90];
+    char ruta[] = "./Listas_Disponibles/";
 
     FILE * arch = fopen("modificador.txt", "w");
 
@@ -28,24 +29,25 @@ int main(){
     arch = fopen("modificador.txt", "r");
     fscanf(arch, "%s", NombreBarModificado);
 
-    FILE * arch2 = fopen(NombreBarModificado, "a+");
+    FILE * arch2 = fopen(strcat(ruta, NombreBarModificado), "a+");
     fclose(arch2);
 
+    printf("Ingrese el primer producto:\n");
 
-
-    ConsultaCantidadProductos();
-    scanf("%d", CantidadProductos);
-
-    for( int i = 0 ; i == CantidadProductos ; i = i + 1){
+    do {
 
         AgregaNombreProductos();
         scanf("%s", NombreProducto);
         AgregaPrecioProductos();
         scanf("%d", PrecioProducto);
 
-        fprintf(arch, "%s\n", NombreProducto);
-        fprintf(arch, "%d\n", PrecioProducto);
-    }
+        fprintf(arch2, "%s\n", NombreProducto);
+        fprintf(arch2, "%d\n", PrecioProducto);
+
+        printf("Quiere agregar otro producto?\n[1] Si\n[2] No\n");
+        scanf("%d", QuiereAgregarOtroProducto);
+
+    } while (QuiereAgregarOtroProducto == 1);
 
     despedida();
 
