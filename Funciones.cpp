@@ -9,13 +9,7 @@ void saludo(){
 
 void ConsultaNombreBar(){
 
-    printf("Como se llama el local?\n");
-
-}
-
-void ConsultaCantidadProductos(){
-
-    printf("Cuantos productos desea agregar?\n");
+    printf("Como se llama el local?         (hasta 80 caracteres)\n");
 
 }
 
