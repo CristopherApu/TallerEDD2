@@ -1,6 +1,6 @@
 #include <cstdio>
-#include <iostream>
-#include <fstream>
+//#include <iostream>
+//#include <fstream>
 #include <cstring>
 using namespace std;
 #include "Funciones.h"
@@ -12,7 +12,7 @@ int main(){
     char NombreProducto;
     int PrecioProducto;
     char NombreBarModificado[90];
-    char ruta[] = "./Listas_Disponibles/";
+    //char ruta[] = "./Listas_Disponibles/";
 
     FILE * arch = fopen("modificador.txt", "w");
 
@@ -29,8 +29,9 @@ int main(){
     arch = fopen("modificador.txt", "r");
     fscanf(arch, "%s", NombreBarModificado);
 
-    FILE * arch2 = fopen(strcat(ruta, NombreBarModificado), "a+");
-    fclose(arch2);
+    //printf(strcat(ruta, NombreBarModificado));
+
+    FILE * arch2 = fopen(/*strcat(ruta, */NombreBarModificado/*)*/, "a+");
 
     printf("Ingrese el primer producto:\n");
 
@@ -48,6 +49,8 @@ int main(){
         scanf("%d", QuiereAgregarOtroProducto);
 
     } while (QuiereAgregarOtroProducto == 1);
+
+    fclose(arch2);
 
     despedida();
 
