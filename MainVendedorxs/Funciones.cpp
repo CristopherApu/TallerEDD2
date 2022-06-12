@@ -25,6 +25,12 @@ void AgregaPrecioProductos(){
 
 }
 
+void ConsultaSiQuiereAgregarOtroProducto(){
+
+    printf("Quiere agregar otro producto?\n[1] Si\n[2] No\n");
+
+}
+
 void despedida(){
 
     printf("Lista creada!");
