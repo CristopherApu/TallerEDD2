@@ -3,20 +3,25 @@
 
     void saludo();
     void ConsultaNombreBar();
+    void modificador();
     void AgregaNombreProductos();
     void AgregaPrecioProductos();
     void ConsultaSiQuiereAgregarOtroProducto();
     void despedida();
 
-/*struct Listas{
+    struct {
 
-    char NombreBar[80];
-    int QuiereAgregarOtroProducto;
-    char NombreProducto;
-    int PrecioProducto;
-    char NombreBarModificado[90];
-    //char ruta[] = "./Listas_Disponibles/";
+        char NombreProducto;
+        int PrecioProducto;
+        int QuiereAgregarOtroProducto;
 
-};*/
+    }Productos;
+
+    struct {
+
+        char NombreBar[80];
+        char NombreBarModificado[90];
+
+    }Lista;
 
 #endif
