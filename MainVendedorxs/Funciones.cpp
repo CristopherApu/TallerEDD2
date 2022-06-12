@@ -13,6 +13,19 @@ void saludo(){
 void ConsultaNombreBar(){
 
     printf("Como se llama el local?         (hasta 80 caracteres)\n");
+    scanf("%s", Lista.NombreBar);
+
+}
+
+void modificador(){
+
+    FILE * arch = fopen("modificador.txt", "w");
+    fprintf(arch, "Lista_");
+    fprintf(arch, "%s", Lista.NombreBar);
+    fprintf(arch, ".txt\n");
+    fclose(arch);
+    arch = fopen("modificador.txt", "r");
+    fscanf(arch, "%s", Lista.NombreBarModificado);
 
 }
 
