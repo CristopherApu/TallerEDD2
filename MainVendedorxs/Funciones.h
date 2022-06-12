@@ -1,27 +1,23 @@
 #ifndef TALLER2EDD_FUNCIONES_H
 #define TALLER2EDD_FUNCIONES_H
 
-    void saludo();
+    void Saludo();
     void ConsultaNombreBar();
-    void modificador();
+    void Modificador();
     void AgregaNombreProductos();
     void AgregaPrecioProductos();
     void ConsultaSiQuiereAgregarOtroProducto();
-    void despedida();
+    void Despedida();
 
     struct {
-
-        char NombreProducto;
+        char NombreProducto [50];
         int PrecioProducto;
         int QuiereAgregarOtroProducto;
-
     }Productos;
 
     struct {
-
         char NombreBar[80];
         char NombreBarModificado[90];
-
     }Lista;
 
 #endif
