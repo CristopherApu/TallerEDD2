@@ -1,7 +1,7 @@
 #include <cstdio>
 //#include <iostream>
 //#include <fstream>
-#include <cstring>
+//#include <cstring>
 using namespace std;
 #include "Funciones.h"
 
@@ -39,13 +39,13 @@ int main(){
 
         AgregaNombreProductos();
         scanf("%s", NombreProducto);
+        fprintf(arch2, "%s\n", NombreProducto);
+        
         AgregaPrecioProductos();
         scanf("%d", PrecioProducto);
-
-        fprintf(arch2, "%s\n", NombreProducto);
         fprintf(arch2, "%d\n", PrecioProducto);
 
-        printf("Quiere agregar otro producto?\n[1] Si\n[2] No\n");
+        ConsultaSiQuiereAgregarOtroProducto();
         scanf("%d", QuiereAgregarOtroProducto);
 
     } while (QuiereAgregarOtroProducto == 1);
