@@ -5,6 +5,7 @@
     void ConsultaNombreBar();
     void AgregaNombreProductos();
     void AgregaPrecioProductos();
+    void ConsultaSiQuiereAgregarOtroProducto();
     void despedida();
 
 /*struct Listas{
@@ -14,7 +15,7 @@
     char NombreProducto;
     int PrecioProducto;
     char NombreBarModificado[90];
-    char ruta[] = ("./Listas_Disponibles/");
+    //char ruta[] = "./Listas_Disponibles/";
 
 };*/
 
