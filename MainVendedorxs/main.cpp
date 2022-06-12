@@ -6,22 +6,15 @@ using namespace std;
 #include "Funciones.h"
 
 int main(){
-
-    saludo();
+    Saludo();
     ConsultaNombreBar();
-    modificador();
-
+    Modificador();
     printf("Ingrese el primer producto:\n");
-
     do {
-
         AgregaNombreProductos();
         AgregaPrecioProductos();
         ConsultaSiQuiereAgregarOtroProducto();
-
     } while (Productos.QuiereAgregarOtroProducto == 1);
-
-    despedida();
-
+    Despedida();
     return 0;
 }
