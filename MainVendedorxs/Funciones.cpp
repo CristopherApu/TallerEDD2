@@ -2,7 +2,7 @@
 #include <cstdio>
 #include <iostream>
 //#include <fstream>
-//#include <cstring>
+#include <cstring>
 
 void Saludo(){
     printf("Hola, bienvenidx\n");
@@ -36,7 +36,9 @@ void AgregaPrecioProductos(){
 }
 void ConsultaSiQuiereAgregarOtroProducto(){
     printf("Quiere agregar otro producto?\n[1] Si\n[2] No\n");
-    std::cin >> Productos.QuiereAgregarOtroProducto;
+    scanf("%s", Productos.QuiereAgregarOtroProducto);
+    Productos.cero = strcmp(Productos.QuiereAgregarOtroProducto, Productos.respuesta);
+    printf("\n%s\n", Productos.cero);
 }
 void Despedida(){
     printf("Lista creada!");
