@@ -12,7 +12,9 @@
     struct {
         char NombreProducto [50];
         char PrecioProducto [8];
-        int QuiereAgregarOtroProducto;
+        char QuiereAgregarOtroProducto [1];
+        int cero;
+        const char *respuesta = "1";
     }Productos;
 
     struct {
