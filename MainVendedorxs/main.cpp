@@ -1,5 +1,6 @@
 #include <cstdio>
 #include <iostream>
+//#include <stdlib.h>
 //#include <fstream>
 //#include <cstring>
 using namespace std;
@@ -15,8 +16,7 @@ int main(){
         AgregaPrecioProductos();
         ConsultaSiQuiereAgregarOtroProducto();
         system("cls");
-        Productos.QuiereAgregarOtroProducto = Productos.QuiereAgregarOtroProducto -1;
-    } while (Productos.QuiereAgregarOtroProducto == -1);
+    } while (Productos.cero == 0);
     Despedida();
     return 0;
 }
