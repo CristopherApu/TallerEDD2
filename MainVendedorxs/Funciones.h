@@ -11,7 +11,7 @@
 
     struct {
         char NombreProducto [50];
-        int PrecioProducto;
+        char PrecioProducto [8];
         int QuiereAgregarOtroProducto;
     }Productos;
 
