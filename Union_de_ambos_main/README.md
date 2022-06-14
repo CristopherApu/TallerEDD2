@@ -1,1 +1,2 @@
+# Propuesta
 Este es el main principal en donde planeamos trabajar. Si bien el "Main Vendedorxs" era nuestra propuesta inicial, decidimos unificar ambos archivos para crear uno solo, más completo, y en donde no abandonemos al "Main Clientes" que hasta su entrega, se estancaba en los productos que traía definidos dentro del código. En esta pasada, esperamos poder unir las listas creadas por el "Main Vendedorxs" y utilizarlas en el "Main Clientes".
